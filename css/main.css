@@ -123,6 +123,9 @@ form {
 .header.nav-down {
 	transform: translateY(0px);
 }
+.body_menu .header.nav-down {
+	transform: none !important;
+}
 .header__wrapper {
 	height: 80px;
 	display: flex;
