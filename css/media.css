@@ -746,7 +746,7 @@
     }
     .billbord__content {
         padding-bottom: 40px;
-        height: calc(100vh - 70px);
+        height: calc(100vh - 110px);
     }
     .billbord__slide {
         height: calc(100vh - 70px);
@@ -1377,6 +1377,12 @@
     }
     .btn-tab {
         font-size: 14px;
+    }
+    .header__wrapper {
+        height: 70px;
+    }
+    .fancybox-slide {
+        padding: 0;
     }
 }
 
