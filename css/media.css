@@ -1392,6 +1392,9 @@
     .billbord-page__content {
         height: calc(100vh - 110px);
     }
+    .projects .show-mob {
+        padding-top: 20px;
+    }
 }
 
 /* Small Devices, Tablets */
