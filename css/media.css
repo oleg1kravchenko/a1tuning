@@ -1393,7 +1393,8 @@
         height: calc(100vh - 110px);
     }
     .projects .show-mob {
-        padding-top: 20px;
+        padding: 20px 15px;
+        padding-bottom: 0;
     }
 }
 
