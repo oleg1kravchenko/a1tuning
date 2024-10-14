@@ -901,6 +901,32 @@
 	<script src="libs/mask/jquery.maskedinput.js"></script>
 	<script src="libs/smooth-scroll/smooth-scroll.js"></script>
 	<script src="js/common.js?ver=1.1"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+	<script>
+		$(document).ready(function() {
+		ymaps.ready(init);
+
+		function init() {
+			var myMap = new ymaps.Map('map', {
+				center: [55.766800, 37.404240],
+				zoom: 10
+			}, {
+				searchControlProvider: 'yandex#search'
+			});		
+			myPlacemark = new ymaps.Placemark([55.766800, 37.404240], {
+            iconCaption: 'A1 TUNING'
+        }, {
+            preset: 'islands#redDotIconWithCaption'
+        });
+
+			myMap.controls.remove('searchControl');
+			myMap.behaviors.disable('scrollZoom');
+			myMap.geoObjects.add(myPlacemark);
+
+		}
+	});
+	
+	</script>
 	<!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
 	<!-- Google Analytics counter --><!-- /Google Analytics counter -->
 </body>
