@@ -319,6 +319,31 @@ $('.btn-tab').click(function() {
 
 }); 
 
+$('.tabs a').click(function(e) {
+    e.preventDefault();
+    var textTab = $(this).html();
+    $(".btn-tab").html(textTab);
+		$(".btn-tab").removeClass("active");
+
+    $('.tabs li').removeClass('active');
+    $(this).parent().addClass('active');
+
+    var tab = $(this).data('tab');
+
+    if (tab === 'all') {
+        $('.item-option').fadeIn(200);
+    } else {
+        $('.item-option').fadeOut(0);
+        $('.item-option[data-product="' + tab + '"]').fadeIn(200);
+    }
+
+	{
+		if ($(window).width() < 799) { 
+			$(this).parents(".tabs").slideUp(200);
+		}
+	  }
+});
+
 
 	$(".input-phone").mask("+7 (999) 999-99-99");
 
