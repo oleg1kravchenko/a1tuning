@@ -107,7 +107,8 @@ $(".item-history__head").click(function() {
 		}
 	});
 
-	$(".navigation__haschild > a").click(function() {
+	$(".navigation__haschild > a").click(function(e) {
+		e.preventDefault();
 		$(this).parent().siblings().find(".navigation__submenu").removeClass("active");
 		$(this).parent().siblings().find("a").removeClass("active");
 		if ($(this).siblings(".navigation__submenu").hasClass("active")) {
@@ -119,7 +120,8 @@ $(".item-history__head").click(function() {
 		}
 	});
 
-	$(".submenu__haschild > a").click(function() {
+	$(".submenu__haschild > a").click(function(e) {
+		e.preventDefault();
 		$(this).parent().siblings().find(".navigation__dropdown").removeClass("active");
 		$(this).parent().siblings().find("a").removeClass("active");
 		if ($(this).siblings(".navigation__dropdown").hasClass("active")) {
