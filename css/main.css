@@ -319,8 +319,11 @@ form {
 }
 .swiper-thumbs {
 	bottom: 40px;
-	right: 40px;
+	right: 0;
+	left: 0;
 	position: absolute;
+	max-width: 1630px;
+	padding: 0 20px;
 }
 .swiper-slide-thumb-active.swiper-slide::after {
 	opacity: 0;

@@ -1623,4 +1623,11 @@
     .item-project {
         height: 650px;
     }
+    .item-manager__image {
+        width: 250px;
+        height: 250px;
+    }
+    .swiper-thumbs {
+        max-width: 2560px;
+    }
 }
