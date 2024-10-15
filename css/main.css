@@ -2749,3 +2749,7 @@ form {
 .fancybox-active {
 	overflow: hidden;
 }
+.billbord__bottom .btn-main {
+	position: relative;
+	z-index: 2;
+}
