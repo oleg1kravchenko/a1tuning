@@ -1396,6 +1396,9 @@
         padding: 20px 15px;
         padding-bottom: 0;
     }
+    .about .title-middle {
+        margin-top: 0;
+    }
 }
 
 /* Small Devices, Tablets */
@@ -1500,5 +1503,121 @@
     }
     .title-middle {
         font-size: 45px;
+    }
+    .article-content h1 {
+        font-size: 60px;
+    }
+    #map {
+        height: 700px;
+    }
+    .unit-contact__value {
+        font-size: 60px;
+        margin-bottom: 20px;
+    }
+    .title-main {
+        font-size: 50px;
+    }
+    .line-form .btn-main {
+        width: 60px;
+    }
+    .footer .btn-main,
+    .line-form .btn-main,
+    .item-input input {
+        height: 60px;
+    }
+    .footer {
+        font-size: 16px;
+    }
+    .footer__nav li {
+        margin-bottom: 20px;
+    }
+    .footer__title {
+        font-size: 18px;
+    }
+    .banner-news__wrap {
+        width: 650px;
+    }
+    .banner-news__content {
+        font-size: 14px;
+        height: 700px;
+    }
+    .item-news p,
+    .item-news__details {
+        font-size: 14px;
+    }
+    .link-page {
+        font-size: 16px;
+    }
+    .title-unit {
+        font-size: 24px;
+    }
+    .page-error__content {
+        width: 710px;
+    }
+    .item-team__image {
+        height: 540px;
+    }
+    .item-team__name {
+        font-size: 24px;
+    }
+    .item-team__descr {
+        font-size: 14px;
+    }
+    .item-history__head {
+        font-size: 36px;
+    }
+    .item-direction {
+        height: 350px;
+    }
+    .page-cars .link-great {
+        padding: 40px 0;
+        font-size: 50px;
+    }
+    .page-privacy {
+        font-size: 14px;
+    }
+    .page-privacy .title-page {
+        margin-bottom: 25px;
+    }
+    .link-great::after {
+        width: 50px;
+        height: 50px;
+    }
+    .swiper-thumbs .swiper-slide {
+        height: 130px;
+        max-width: 130px;
+    }
+    .billbord__content {
+        padding-bottom: 130px;
+    }
+    .title-section {
+        font-size: 100px;
+    }
+    .billbord__content .title-section {
+        max-width: 920px;
+    }
+    .billbord_about .title-section {
+        max-width: 2000px;
+    }
+    .projects .title-section {
+        max-width: 1521px;
+    }
+    .consultation .title-section {
+        max-width: 1810px;
+    }
+    .swiper-gallery .swiper-slide {
+        max-width: 1200px;
+    }
+    .image-project {
+        height: 600px;
+    }
+    .col-md-12 .image-project {
+        height: 1000px;
+    }
+    .text-content .title-unit, .text-content .title-main {
+        margin-bottom: 20px;
+    }
+    .item-vacancy__image {
+        height: 500px;
     }
 }
