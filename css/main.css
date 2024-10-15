@@ -2485,7 +2485,6 @@ form {
 	height: 100vh;
 	width: 50vw;
     padding-top: 80px;
-	overflow: auto;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -2746,4 +2745,7 @@ form {
 }
 .modal-wrap .title-page + .btn-main {
 	margin-top: 20px;
+}
+.fancybox-active {
+	overflow: hidden;
 }
