@@ -43,20 +43,34 @@ function hasScrolled() {
     lastScrollTop = st;
 }
 
-$('.consultation input[name="radio"]').on('change', function() {
-	var selectedValue = $('input[name="radio"]:checked').val();
 
-	if (selectedValue === 'phone') {
-		$('.consultation .item-form_phone input').attr('required', 'required').attr('aria-required', 'true');
-		$('.consultation .item-form_email input').removeAttr('required').attr('aria-required', 'false');
-	} else if (selectedValue === 'email') {
-		$('.consultation .item-form_email input').attr('required', 'required').attr('aria-required', 'true');
-		$('.consultation .item-form_phone input').removeAttr('required').attr('aria-required', 'false');
+  $('form').each(function() {
+	var $form = $(this);
+
+	// Функция установки атрибутов
+	function setAttributes() {
+		var selectedValue = $form.find('input[name="radio"]:checked').val();
+
+		if (selectedValue === 'phone') {
+			$form.find('.item-form_phone input').attr('required', 'required').attr('aria-required', 'true');
+			$form.find('.item-form_email input').removeAttr('required').attr('aria-required', 'false');
+		} else if (selectedValue === 'email') {
+			$form.find('.item-form_email input').attr('required', 'required').attr('aria-required', 'true');
+			$form.find('.item-form_phone input').removeAttr('required').attr('aria-required', 'false');
+		}
 	}
-});
 
-// Initial trigger to set the attributes based on the default checked radio button
-$('.consultation input[name="radio"]:checked').trigger('change');
+	// Начальная проверка
+	setAttributes();
+
+	// Событие при изменении состояния радио-кнопок
+	$form.find('input[name="radio"]').on('change', function() {
+		setAttributes();
+	});
+
+	// Первоначальное триггерное событие для установки атрибутов на основе выбранной по умолчанию радио-кнопки
+	$form.find('input[name="radio"]:checked').trigger('change');
+});
 
 $(".item-history__head").click(function() {
     $(this).parent().toggleClass("active");
@@ -349,23 +363,28 @@ $('.tabs a').click(function(e) {
 
 	$(".input-phone").mask("+7 (999) 999-99-99");
 
-	function toggleTelegramInput() {
-		if ($('.radio_tg input').is(':checked')) {
-			$('.item-form_email').fadeOut(0);
-			$('.item-form_telegram').fadeIn(200);
-		} else {
-			$('.item-form_telegram').fadeOut(0);
-			$('.item-form_email').fadeIn(200);
-		}
-	}
+	$('form').each(function() {
+        var $form = $(this);
 
-	// Initial check
-	toggleTelegramInput();
+        // Функция переключения полей ввода
+        function toggleTelegramInput() {
+            if ($form.find('.radio_tg input').is(':checked')) {
+                $form.find('.item-form_email').fadeOut(0);
+                $form.find('.item-form_telegram').fadeIn(200);
+            } else {
+                $form.find('.item-form_telegram').fadeOut(0);
+                $form.find('.item-form_email').fadeIn(200);
+            }
+        }
 
-	// On change event
-	$('input[name="radio"]').change(function() {
-		toggleTelegramInput();
-	});
+        // Начальная проверка
+        toggleTelegramInput();
+
+        // Событие при изменении состояния радио-кнопок
+        $form.find('input[name="radio"]').change(function() {
+            toggleTelegramInput();
+        });
+    });
 
 
 	//Попап менеджер FancyBox
