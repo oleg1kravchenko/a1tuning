@@ -74,7 +74,7 @@ $(".item-history__head").click(function() {
 
 	//кнопка sandwich
 	$(".btn-menu").click(function() {
-		$(this).toggleClass("active");
+		
 		$(".menu-dropdown").addClass("firstopened");
 		if ($(".menu-dropdown").hasClass("active")) {
 			$(".menu-dropdown").removeClass("active");
@@ -84,10 +84,12 @@ $(".item-history__head").click(function() {
 			$(".navigation__haschild > a").removeClass("active");
 			$(".submenu__haschild > a").removeClass("active");
 			$("body").removeClass("body_menu");
+			$(".btn-menu").removeClass("active");
 		} else {
 			$(".menu-dropdown").addClass("active");
 			$(".menu-overlay").fadeIn(200);
 			$("body").addClass("body_menu");
+			$(".btn-menu").addClass("active");
 		}
 	});
 

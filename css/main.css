@@ -824,6 +824,7 @@ form {
 	flex-direction: column;
 	align-items: flex-start;
 	overflow: auto;
+	scrollbar-width: thin;
 }
 .menu-dropdown__title,
 .menu li {
@@ -987,6 +988,7 @@ form {
 	left: 75%;
 	padding: 0;
 	overflow: auto;
+	scrollbar-width: thin;
 }
 .item-dropdown {
 	display: block;
