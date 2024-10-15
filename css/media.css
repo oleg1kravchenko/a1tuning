@@ -1310,6 +1310,7 @@
     }
     .modal-wrap__content {
         padding: 20px;
+        padding-top: 0;
     }
     .modal-wrap .title-page {
         margin-bottom: 10px;
