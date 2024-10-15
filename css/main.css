@@ -2563,8 +2563,9 @@ form {
 .modal-wrap__content {
     width: 100%;
 	padding: 0 40px;
-    max-height: 100vh;
+    max-height: calc(100vh - 110px);
     overflow: auto;
+	scrollbar-width: thin;
 }
 
 .item-favorite {
