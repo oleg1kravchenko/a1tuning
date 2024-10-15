@@ -2499,6 +2499,7 @@ form {
 	padding: 0;
 	background: transparent;
 	display: none;
+	overflow: hidden !important;
 }
 .fancy-main .fancybox-bg {
 	background: rgba(0, 0, 0, 0.6);
