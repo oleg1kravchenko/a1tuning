@@ -953,6 +953,7 @@
     }
     .menu-dropdown__bottom {
         padding: 40px 20px;
+        padding-bottom: 80px;
         display: block;
     }
     .unit-socials__title {
