@@ -767,11 +767,11 @@
     .item-spec.item-spec_unit {
         display: block;
     }
-    .item-spec_unit .item-spec__content {
-        position: absolute;
-    }
     .row.row_managers {
         margin-bottom: 40px;
+    }
+    .item-spec_unit .item-spec__content {
+        position: absolute;
     }
 }
 
@@ -1451,6 +1451,12 @@
     }
     .item-spec__image {
         height: 300px;
+    }
+    .item-spec_unit .item-spec__content {
+        position: relative;
+    }
+    .item-spec.item-spec_unit {
+        display: flex;
     }
 }
 
