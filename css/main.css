@@ -2904,3 +2904,6 @@ label {
 .for-managers .title-page {
 	margin-bottom: 20px;
 }
+.fancybox-dot:only-child {
+	display: none;
+}
