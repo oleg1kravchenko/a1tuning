@@ -356,7 +356,7 @@ $('.tabs a').click(function(e) {
     }
 
 	{
-		if ($(window).width() < 799) { 
+		if ($(window).width() < 1200) { 
 			$(this).parents(".tabs").slideUp(200);
 		}
 	  }

@@ -129,6 +129,9 @@
         font-size: 14px;
         height: 50px;
     }
+    .item-spec_unit .item-spec__content {
+        font-size: 14px;
+    }
 }
 @media only screen and (max-width : 1599px) {
     .title-section {
@@ -307,6 +310,9 @@
     }
     .item-option .title-page {
         font-size: 30px;
+    }
+    .item-spec__content {
+        padding: 25px;
     }
 }
 /* Large Devices, Wide Screens */
@@ -645,6 +651,48 @@
     .item-option__bottom {
         padding-top: 20px;
     }
+
+    .swiper-service .swiper-wrapper {
+        display: flex;
+    }
+    .swiper-service {
+        margin: 0 -40px;
+        margin-bottom: 40px;
+    }
+    .service-content__links {
+        grid-template-columns: 1fr 1fr;
+    }
+    .service-content {
+        margin-bottom: 100px;
+    }
+    .modal-wrap {
+        width: 100vw;
+    }
+    .item-favorite__title {
+        max-width: 100%;
+    }
+    .fancy-video .fancybox-content {
+        height: 80vh !important;
+    }
+    .tabs a {
+        font-size: 14px;
+        height: 35px;
+        color: #222;
+        justify-content: flex-start;
+        text-align: left;
+        border-bottom: 1px solid rgba(124, 124, 124, 0.2);
+    }
+    .tabs a:hover,
+    .tabs .active a {
+        color: #222;
+        background: transparent;
+    }
+    .tabs .active {
+        display: none;
+    }
+    .btn-tab {
+        font-size: 14px;
+    }
     .tabs-wrap {
         margin-bottom: 60px;
         z-index: 50;
@@ -694,27 +742,36 @@
     .btn-tab.active::after {
         transform: rotate(180deg);
     }
-    .swiper-service .swiper-wrapper {
+    .item-spec .swiper-photos__item {
+        height: 400px;
+    }
+    .item-spec__content {
+        position: relative;
+        width: 100%;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+    .item-spec {
         display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
     }
-    .swiper-service {
-        margin: 0 -40px;
+    .item-spec .swiper {
+        width: 100%;
+    }
+    .swiper-photos .swiper-pagination {
+        padding: 0 20px !important;
+    }
+    .item-spec.item-spec_unit {
+        display: block;
+    }
+    .item-spec_unit .item-spec__content {
+        position: absolute;
+    }
+    .row.row_managers {
         margin-bottom: 40px;
-    }
-    .service-content__links {
-        grid-template-columns: 1fr 1fr;
-    }
-    .service-content {
-        margin-bottom: 100px;
-    }
-    .modal-wrap {
-        width: 100vw;
-    }
-    .item-favorite__title {
-        max-width: 100%;
-    }
-    .fancy-video .fancybox-content {
-        height: 80vh !important;
     }
 }
 
@@ -1353,25 +1410,7 @@
         font-size: 14px;
         height: 50px;
     }
-    .tabs a {
-        font-size: 14px;
-        height: 35px;
-        color: #222;
-        justify-content: flex-start;
-        text-align: left;
-        border-bottom: 1px solid rgba(124, 124, 124, 0.2);
-    }
-    .tabs a:hover,
-    .tabs .active a {
-        color: #222;
-        background: transparent;
-    }
-    .tabs .active {
-        display: none;
-    }
-    .btn-tab {
-        font-size: 14px;
-    }
+
     .header__wrapper {
         height: 70px;
     }
@@ -1399,6 +1438,19 @@
     }
     .about .title-middle {
         margin-top: 0;
+    }
+    .item-spec__buttons .btn-main {
+        width: 100%;
+        flex: none;
+    }
+    .item-spec__buttons {
+        flex-wrap: wrap;
+    }
+    .item-spec .swiper-photos__item {
+        height: 300px;
+    }
+    .item-spec__image {
+        height: 300px;
     }
 }
 
@@ -1434,13 +1486,7 @@
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 799px) {
-    .btn-tab,
-    .show-mob {
-        display: none !important;
-    }
-    .tabs {
-        display: flex !important;
-    }
+
 }
 
 /* Medium Devices, Desktops */
@@ -1457,6 +1503,14 @@
     }
     .show-tablet {
         display: none !important;
+    }
+
+    .btn-tab,
+    .show-mob {
+        display: none !important;
+    }
+    .tabs {
+        display: flex !important;
     }
 }
 @media (min-width: 1600px) {
@@ -1630,5 +1684,8 @@
     }
     .swiper-thumbs {
         max-width: 2560px;
+    }
+    .item-spec__image {
+        height: 700px;
     }
 }
