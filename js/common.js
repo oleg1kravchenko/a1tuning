@@ -277,7 +277,7 @@ $(".item-history__head").click(function() {
 	$('.swiper-photos').each(function(){
 		var swiper9 = new Swiper(this, {
 			slidesPerView: 1,
-			loop: true,
+			loop: false,
 			navigation: {
 				nextEl: (this, ".arrow-swiper_next"),
 				prevEl: (this, ".arrow-swiper_prev")
